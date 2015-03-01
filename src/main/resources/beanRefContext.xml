@@ -3,11 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <alias name="ConcreteObserver" alias="concreteObserver"/>
-
-    <bean id="ConcreteSubject" class="dio.ConcreteSubject"/>
-    <bean id="ConcreteObserver" class="dio.ConcreteObserver"/>
-
-
-
+    <bean id="mainContext" class="org.springframework.context.support.ClassPathXmlApplicationContext">
+            <constructor-arg>
+                <list>
+                    <value>spring-config.xml</value>
+                </list>
+            </constructor-arg>
+    </bean>
 </beans>
