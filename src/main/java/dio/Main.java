@@ -17,8 +17,14 @@ public class Main {
 
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-config.xml");
         applicationContext.registerShutdownHook();
+//        NewSubject newSubject = applicationContext.getBean("");
+
+        SimpleApplicationListener sial = (SimpleApplicationListener) applicationContext.getBean("listener");
+
 
         defineBean(applicationContext,Recipient.class,Boolean.FALSE,Boolean.FALSE,Boolean.TRUE,"prototype","recipient");
+
+
         Recipient recipient = (Recipient) applicationContext.getBean("recipient");
         recipient.setBeanName("newRecipientName");
         recipient.printBeanName();

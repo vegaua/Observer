@@ -3,6 +3,7 @@ package dio;
 /**
  * Created by Alex on 25.02.15.
  */
+
 public class ConcreteObserver implements Observer {
 
     private String name;
